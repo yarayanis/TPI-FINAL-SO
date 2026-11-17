@@ -216,7 +216,7 @@ class Simulador:
                     f"Continúa {seleccionado.pid} en CPU por tener menor tiempo restante ({seleccionado.restante} u.t.).",
                 )
         else:
-            self.registrar_evento("CPU IDLE", "No hay procesos en cola de LISTOS; procesador inactivo.")
+            self.registrar_evento("CPU INACTIVA", "No hay procesos en cola de LISTOS; procesador inactivo.")
 
         if self.proceso_ejecucion:
             if self.proceso_ejecucion.tiempo_comienzo == -1:

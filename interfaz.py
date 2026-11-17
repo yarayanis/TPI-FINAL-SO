@@ -90,7 +90,7 @@ def renderizar_dashboard(sim, fase=""):
         p = sim.proceso_ejecucion
         texto_cpu = f"CPU: {p.pid} ({p.tamano}KB | Rest: {p.restante}/{p.irrupcion})"
     else:
-        texto_cpu = "CPU: [ Inactivo / Idle ]"
+        texto_cpu = "CPU: [ Inactivo ]"
 
     nodos_nuevos = [f"{p.pid} ({p.tamano}KB)" for p in sim.cola_nuevo]
     listos_ordenados = sorted(sim.cola_listo, key=lambda p: (p.restante, p.arribo))
